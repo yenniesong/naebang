@@ -1,6 +1,5 @@
 package com.project.naebang.entity;
 
-import lombok.Builder;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -31,17 +30,6 @@ public class User {
 
     @CreationTimestamp
     private Timestamp createDate;
-
-    @Builder
-    public User(int id, String userid, String password, String username, String email, Timestamp createDate) {
-        this.id = id;
-        this.userid = userid;
-        this.password = password;
-        this.username = username;
-        this.email = email;
-        this.createDate = createDate;
-    }
-
 
     public List<String> getRoleList(){
         if (this.roles.length() > 0) {
